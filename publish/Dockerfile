@@ -1,0 +1,14 @@
+FROM nginx:latest
+COPY  public /public
+RUN apt-get update \ 
+  && apt-get -y install wget ca-certificates \
+  && wget "https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb" -O quarto.deb \
+  && dpkg -i quarto.deb \
+  && rm quarto.deb \
+  && apt-get autoremove -y \
+  && apt-get autoclean -y \
+  && rm -rf /var/lib/apt/lists/* \
+  && rm -rf /tmp/*
+RUN quarto render /public --output-dir /usr/share/nginx/html
+COPY default.conf /etc/nginx/conf.d/default.conf
+EXPOSE 8080

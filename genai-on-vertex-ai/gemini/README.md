@@ -10,7 +10,6 @@ To run the notebooks you'll need access to a Google Cloud project with the Verte
 ## Using this repository
 
 <table>
-
   <tr>
     <th></th>
     <th style="text-align: center;">Description</th>
@@ -38,7 +37,6 @@ To run the notebooks you'll need access to a Google Cloud project with the Verte
     </td>
     <td><a href="./evals_playbook">evaluating prompt iterations, sampling parameters, long context</a></td>
   </tr>
-
 </table>
 
 > [!TIP]

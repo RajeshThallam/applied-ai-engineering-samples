@@ -1,6 +1,6 @@
 # Google Cloud Applied AI Engineering
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+![](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 Welcome to the Google Cloud Applied AI Engineering repository. This repository contains reference guides, blueprints, code samples, and hands-on labs developed by the Google Cloud Applied AI Engineering team.
 

@@ -1,0 +1,20 @@
+FROM python:3.10-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+COPY public /public
+
+RUN apt-get update \ 
+  && apt-get -y install wget ca-certificates \
+  && wget "https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb" -O quarto.deb \
+  && dpkg -i quarto.deb \
+  && rm quarto.deb \
+  && apt-get autoremove -y \
+  && apt-get autoclean -y \
+  && rm -rf /var/lib/apt/lists/* \
+  && rm -rf /tmp/*
+
+RUN quarto render /public --output-dir /_site
+
+EXPOSE 8000
+CMD ["python", "-m", "http.server", "8000", "--directory", "_site"]

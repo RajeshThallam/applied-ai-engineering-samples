@@ -1,0 +1,162 @@
+project:
+  type: website
+  output-dir: public
+  render:
+    - "*.md"
+    - ./README.md
+    - ./LICENSE.md
+    - ./CONTRIBUTING.md
+    - ./genai-on-vertex-ai/advanced_prompting_training/README.md
+    - ./genai-on-vertex-ai/vertex_foundation_tuning/README.md
+    - ./genai-on-vertex-ai/gemini/evals_playbook/README.md
+    - ./genai-on-vertex-ai/gemini/prompting_recipes/multimodal/README.md
+    - ./genai-on-vertex-ai/gemini/prompting_recipes/README.md
+    - ./genai-on-vertex-ai/gemini/prompting_recipes/long_context_window/README.md
+    - ./genai-on-vertex-ai/gemini/README.md
+    - ./genai-on-vertex-ai/natural_language_to_sql/README.md
+    - ./genai-on-vertex-ai/vertex_ai_extensions/README.md
+    - ./genai-on-vertex-ai/README.md
+    - ./genai-on-vertex-ai/retrieval_augmented_generation/README.md
+    - ./genai-on-vertex-ai/developer_productivity_with_genai/README.md
+    - ./genai-on-vertex-ai/agents/reasoning_engine/langchain_on_reasoning_engine/README.md
+    - ./genai-on-vertex-ai/vertex_ai_search/README.md
+    - ./genai-on-vertex-ai/vertex_evaluation_services/README.md
+    - ./genai-on-vertex-ai/langchain_observability_snippet/README.md
+    - ./ai-infrastructure/tpu-training-on-gke/README.md
+    - ./ai-infrastructure/tpu-training-on-gke/examples/README.md
+    - ./ai-infrastructure/tpu-training-on-gke/examples/jobset/README.md
+    - ./ai-infrastructure/tpu-training-on-gke/examples/xpk/README.md
+    - ./ai-infrastructure/tpu-training-on-gke/images/README.md
+    - ./ai-infrastructure/README.md
+    - ./ai-infrastructure/terraform-modules/gke-aiml/README.md
+    - ./ai-infrastructure/terraform-modules/kueue-config/README.md
+    - ./ai-infrastructure/terraform-modules/bootstrap/README.md
+    - ./ai-infrastructure/terraform-modules/metrics-tracking/README.md
+    - ./ai-infrastructure/terraform-modules/workload-identity/README.md
+    - ./research-operationalization/README.md
+    - ./research-operationalization/timesfm/README.md
+    - "*.ipynb"
+    - index.qmd
+
+    
+website:
+  page-navigation: true
+  bread-crumbs: true
+  title: "Applied AI Engineering"
+  description: "Welcome to the Google Cloud Applied AI Engineering repository. This repository contains reference guides, blueprints, code samples, and hands-on labs developed by the Google Cloud Applied AI Engineering team."
+  site-url: ""
+  
+  repo-url: https://github.com/GoogleCloudPlatform/applied-ai-engineering-samples
+  repo-actions: [issue]
+
+  open-graph: true
+  twitter-card:
+    creator: "@rajesh_thallam"
+    image: "/images/linkedin_banner.png"
+
+  page-footer:
+    left: ""
+    background: "#A7D5E8"
+    center:
+    - text: "License"
+      href: LICENSE.md
+    - text: "Contributions"
+      href: CONTRIBUTING.md
+    right:
+      - icon: github
+        href: https://github.com/GoogleCloudPlatform/applied-ai-engineering-samples
+        aria-label: AAIE GitHub
+
+  navbar:
+    background: "#A7D5E8"
+    search: true
+    logo: "assets/aaie_logo.png"
+    align: center
+    title: false
+    collapse-below: lg
+ 
+    right:
+      - icon: github
+        href: https://github.com/GoogleCloudPlatform/applied-ai-engineering-samples
+        aria-label: GitHub
+      - icon: cloud-fill
+        href: https://cloud.google.com/use-cases/generative-ai
+        aria-label: Google Cloud
+
+    left:
+      - text: "Overview"
+        href: README.md
+      - text: "Generative AI on Vertex AI"
+        href: ./genai-on-vertex-ai/README.md
+      - text: "AI Infrastructure"
+        href: ./ai-infrastructure/README.md
+      - text: "Research Operationalization"
+        href: ./research-operationalization/README.md
+
+  sidebar:
+    - title: "Generative AI on Vertex AI"
+      style: "docked"
+      background: light
+      contents:
+        - ./genai-on-vertex-ai/README.md
+        - section: "Foundation Models"
+          contents:
+            - section: "Gemini Prompting Recipes"
+              href: ./genai-on-vertex-ai/gemini/prompting_recipes/README.md
+              contents:
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/long_context_window/gemini_long_context_text.ipynb
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/long_context_window/gemini_long_context_text.ipynb
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/multimodal/multimodal_prompting_image.ipynb
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/multimodal/multimodal_prompting_video.ipynb
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/multimodal/multimodal_prompting_audio.ipynb
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/pdf_processing/1_extract_pdf_pages_with_gemini.ipynb
+                  - ./genai-on-vertex-ai/gemini/prompting_recipes/pdf_processing/2_pdf_info_extraction_with_gemini.ipynb
+            - section: "Advanced Prompting"
+              href: ./genai-on-vertex-ai/advanced_prompting_training/README.md
+              contents:
+                  - ./genai-on-vertex-ai/advanced_prompting_training/cot_react.ipynb
+            - section: "Model Tuning"
+              href: ./genai-on-vertex-ai/vertex_foundation_tuning/README.md
+              contents:
+                  - ./genai-on-vertex-ai/vertex_foundation_tuning/vertexai-model-tuning.ipynb
+
+        - section: "Evaluations"
+          contents:
+            - section: "Gemini Evaluations Playbook"
+              href: ./genai-on-vertex-ai/gemini/evals_playbook/README.md
+              contents:
+                  - ./genai-on-vertex-ai/gemini/evals_playbook/notebooks/0_gemini_evals_playbook_setup.ipynb
+                  - ./genai-on-vertex-ai/gemini/evals_playbook/notebooks/1_gemini_evals_playbook_evaluate.ipynb
+                  - ./genai-on-vertex-ai/gemini/evals_playbook/notebooks/2_gemini_evals_playbook_gridsearch.ipynb
+            - section: "Vertex AI GenAI Evaluations"
+              href: ./genai-on-vertex-ai/vertex_evaluation_services/README.md
+              contents:
+                  - ./genai-on-vertex-ai/vertex_evaluation_services/evaluation-rag-systems/evaluation_rag_use_cases.ipynb
+                  - ./genai-on-vertex-ai/vertex_evaluation_services/evaluation-rag-systems/evaluation_rag_use_cases.ipynb
+
+    - title: "AI Infrastructure"
+      contents:
+        - ./ai-infrastructure/README.md
+        - text: "TPU Training on GKE"
+          href: ai-infrastructure/tpu-training-on-gke/README.md
+
+    - title: "Research Operationalization"
+      contents:
+        - ./research-operationalization/README.md
+        - text: "TimesFM"
+          href: research-operationalization/timesfm/operationalizing_timesfm_on_vertexai.ipynb
+
+format:
+  html:
+    theme:
+      light: [cosmo]
+      dark: [cosmo, assets/style/dark.scss]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+    include-in-header: "assets/style/fontawesome.html"
+
+freeze: auto
+
+editor: visual
